@@ -12,6 +12,7 @@ echo $data;
 $file_name=$_GET["usrid"].".jpg";
 file_put_contents($file_name, $data);
 /* use GD process picture*/
+
 echo $_GET["picurl"];
 list($width, $height) = getimagesize($file_name);
 $newwidth = 640;
