@@ -1,6 +1,11 @@
 <?php
+$url_to_fetch = $_GET["picurl"];
+echo strlen($_GET["picurl"]);
+if(strlen($_GET["picurl"])<10){
+	$url_to_fetch = "http://123.207.172.12/TopMajongHtml5/man.jpg";
+}
 $curl = curl_init();
-curl_setopt($curl,CURLOPT_URL,$_GET["picurl"]);
+curl_setopt($curl,CURLOPT_URL,$url_to_fetch);
 curl_setopt($curl, CURLOPT_HEADER, 0); 
 curl_setopt($curl, CURLOPT_REFERER, '');
 curl_setopt($curl,CURLOPT_FOLLOWLOCATION,1);
